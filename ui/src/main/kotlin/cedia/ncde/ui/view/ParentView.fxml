@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox prefHeight="432.0" prefWidth="610.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <MenuBar VBox.vgrow="NEVER">
+            <menus>
+                <Menu mnemonicParsing="false" text="File">
+                    <items>
+                        <MenuItem fx:id="openMenuItem" mnemonicParsing="false" text="Open..." />
+                  <MenuItem fx:id="saveAsMenuItem" mnemonicParsing="false" text="Save As..." />
+                    </items>
+                </Menu>
+            <Menu mnemonicParsing="false" text="Quick Settings">
+              <items>
+                  <RadioMenuItem fx:id="alwaysQuickDeleteRadio" mnemonicParsing="false" text="Always Quick Delete" />
+              </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Cedia" />
+            </menus>
+        </MenuBar>
+        <SplitPane dividerPositions="0.3963815789473684" focusTraversable="true" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
+            <items>
+            <StackPane fx:id="npcDefinitionsPane" minWidth="230.0" prefHeight="150.0" prefWidth="200.0" />
+            <StackPane fx:id="editorPane" />
+            </items>
+        </SplitPane>
+    </children>
+</VBox>

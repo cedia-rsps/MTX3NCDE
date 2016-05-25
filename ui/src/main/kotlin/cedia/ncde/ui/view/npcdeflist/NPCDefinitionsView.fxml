@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<AnchorPane fx:id="npcPane" prefHeight="390.0" prefWidth="237.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <TextField fx:id="searchTextField" alignment="CENTER" layoutX="30.0" layoutY="351.0" prefHeight="25.0" prefWidth="169.0" promptText="Search..." AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" />
+        <ListView fx:id="npcListView" layoutX="47.0" layoutY="79.0" prefHeight="344.0" prefWidth="204.0" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="50.0">
+         <contextMenu>
+            <ContextMenu>
+              <items>
+                <MenuItem fx:id="copyMenuItem" mnemonicParsing="false" text="Copy..." />
+                  <MenuItem fx:id="quickDeleteMenuItem" mnemonicParsing="false" text="Delete (Quick)" />
+              </items>
+            </ContextMenu>
+         </contextMenu></ListView>
+        <HBox alignment="CENTER" layoutX="19.0" layoutY="5.0" prefHeight="41.0" prefWidth="177.0" spacing="15.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="5.0">
+            <children>
+                <Button fx:id="addButton" mnemonicParsing="false" prefHeight="25.0" prefWidth="63.0" text="Add" />
+                <SplitMenuButton fx:id="deleteMenuButton" mnemonicParsing="false" text="Delete">
+                    <items>
+                        <MenuItem fx:id="deleteMenuItem" mnemonicParsing="false" text="Delete (Quick)" />
+                        <MenuItem fx:id="deleteAllMenuItem" mnemonicParsing="false" text="Delete All" />
+                    </items>
+                </SplitMenuButton>
+            </children>
+        </HBox>
+    </children>
+</AnchorPane>
