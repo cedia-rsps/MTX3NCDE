@@ -15,8 +15,10 @@ class EditorView : AbstractView() {
     val propertyTablePane: StackPane by fxid()
     val saveButton: Button by fxid()
     val editorLabel: Label by fxid()
+    val saveWarningLabel: Label by fxid()
 
     init {
+        saveWarningLabel.visibleProperty().bind(presenter.editingNpcManager.editingNpcObject.isNotNull)
         saveButton.isDisable = false
         saveButton.visibleProperty().bind(presenter.editingNpcManager.editingNpcObject.isNotNull)
         presenter.propertyView.root.visibleProperty().bind(presenter.editingNpcManager.editingNpcObject.isNotNull)
